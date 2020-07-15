@@ -29,22 +29,26 @@
             //  Server tarafındaki metota üye olmak
             connection.on("ReceiveName", (name) => {
                 console.log(name);
+                $("#namesList").append(`<li class="list-group-item"> ${name}</li>`)
             });
         });
         
     </script>
 } 
 
- <div class="row">
-      <div class="col-md-8 offset-2" >
-          <input class="form-control" type="text" id="txtName"/>
-          <hr />
-          <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>
-          <div class="alert alert-info"> 
-              <input class="form-control" type="text" id="txtSonuc" />
-          </div>
-      </div>
- </div>
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <input class="form-control" type="text" id="txtName" />
+        <hr />
+        <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>
+        <div class="alert alert-info">
+            <input class="form-control" type="text" id="txtSonuc" />
+        </div>
+    </div>
+    <div class="col-md-8 offset-2">
+         <ul class="list-group" id="namesList"></ul>
+    </div>
+</div>
 
 
 
