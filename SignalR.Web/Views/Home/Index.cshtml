@@ -9,7 +9,7 @@
     <script type="text/javascript">
 
         $(document).ready(() => {
-            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44307/MyHup");
+            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44307/MyHup").build();
 
             $("#conStatus").text(connection.connecitonState);
 
