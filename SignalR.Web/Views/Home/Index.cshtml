@@ -8,8 +8,15 @@
  
     <script type="text/javascript">
 
+
         $(document).ready(() => {
-            var connection = new signalR.HubConnectionBuilder().configureLogging(signalR.LogLevel.Debug).withUrl("https://localhost:44307/MyHup").build();
+            // https://localhost:44307/MyHup  IIS
+            var connection = new signalR.HubConnectionBuilder()
+                .withAutomaticReconnect([1000,1000,1000,1000])
+                .configureLogging(signalR.LogLevel.Debug)
+                .withUrl("https://localhost:44307/MyHup")
+                .build();
+            //.configureLogging(signalR.LogLevel.Information).withAutomaticReconnect().withUrl("https://localhost:5001/MyHup").build();
 
             $("#txtSonuc").val(connection.connectionState);
 
@@ -29,7 +36,7 @@
             //  Server tarafındaki metota üye olmak
             connection.on("ReceiveName", (name) => {
                 console.log(name);
-                $("#namesList").append(`<li class="list-group-item"> ${name}</li>`)
+                $("#namesList").append(`<li class="list-group-item"> ${name}</li>`);
             });
         });
         
