@@ -11,12 +11,13 @@
         $(document).ready(() => {
             var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44307/MyHup").build();
 
-            $("#conStatus").text(connection.connecitonState);
+            $("#txtSonuc").val(connection.connectionState);
 
             connection.start().then(() => {
-                $("#conStatus").text(connection.connecitonState);
+                $("#txtSonuc").val(connection.connectionState);
             }).catch((err) => { console.log(err) });
 
+            $("#txtSonuc").val(connection.connectionState);
             $("#btnNameSave").click(() => {
 
                 connection.invoke("SendName", $("#txtName").val()).catch((err) => {
@@ -30,7 +31,7 @@
                 console.log(name);
             });
         });
-
+        
     </script>
 } 
 
@@ -39,8 +40,8 @@
           <input class="form-control" type="text" id="txtName"/>
           <hr />
           <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>
-          <div class="alert alert-info">
-              Bağlantı Durumu :<strong id="conStatus"></strong>
+          <div class="alert alert-info"> 
+              <input class="form-control" type="text" id="txtSonuc" />
           </div>
       </div>
  </div>

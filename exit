@@ -1,0 +1,40 @@
+[1mdiff --git a/SignalR.Web/Views/Home/Index.cshtml b/SignalR.Web/Views/Home/Index.cshtml[m
+[1mindex ac2ac41..f88fa6e 100644[m
+[1m--- a/SignalR.Web/Views/Home/Index.cshtml[m
+[1m+++ b/SignalR.Web/Views/Home/Index.cshtml[m
+[36m@@ -11,12 +11,13 @@[m
+         $(document).ready(() => {[m
+             var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44307/MyHup").build();[m
+ [m
+[31m-            $("#conStatus").text(connection.connecitonState);[m
+[32m+[m[32m            $("#txtSonuc").val(connection.connectionState);[m
+ [m
+             connection.start().then(() => {[m
+[31m-                $("#conStatus").text(connection.connecitonState);[m
+[32m+[m[32m                $("#txtSonuc").val(connection.connectionState);[m
+             }).catch((err) => { console.log(err) });[m
+ [m
+[32m+[m[32m            $("#txtSonuc").val(connection.connectionState);[m
+             $("#btnNameSave").click(() => {[m
+ [m
+                 connection.invoke("SendName", $("#txtName").val()).catch((err) => {[m
+[36m@@ -30,7 +31,7 @@[m
+                 console.log(name);[m
+             });[m
+         });[m
+[31m-[m
+[32m+[m[41m        [m
+     </script>[m
+ } [m
+ [m
+[36m@@ -39,8 +40,8 @@[m
+           <input class="form-control" type="text" id="txtName"/>[m
+           <hr />[m
+           <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>[m
+[31m-          <div class="alert alert-info">[m
+[31m-              Bağlantı Durumu :<strong id="conStatus"></strong>[m
+[32m+[m[32m          <div class="alert alert-info">[m[41m [m
+[32m+[m[32m              <input class="form-control" type="text" id="txtSonuc" />[m
+           </div>[m
+       </div>[m
+  </div>[m
