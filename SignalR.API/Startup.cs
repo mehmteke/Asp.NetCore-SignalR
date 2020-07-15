@@ -30,7 +30,7 @@ namespace SignalR.API
             {
                 options.AddPolicy("CorsPolicy", builder =>
                 {
-                    builder.WithOrigins("https://localhost:44317/").AllowAnyHeader().AllowAnyMethod();
+                    builder.WithOrigins("https://localhost:44317").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
                 });
             });
 
