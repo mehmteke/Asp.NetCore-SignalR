@@ -74,6 +74,14 @@
                 console.log(name);
                 $("#namesList").append(`<li class="list-group-item"> ${name}</li>`);
             });
+
+            connection.on("ReceiveClientCount", (clientCount) => {
+                $("#txtClientCount").val(clientCount);
+            });
+
+            connection.on("Notify", (countText) => {
+                $("#notify").html(`<div class="alert alert-success"> ${countText}</div>`);
+            });
         });
         
     </script>
@@ -86,7 +94,8 @@
         <button class="btn btn-primary" id="btnNameSave">İsim Kaydet</button>
         <div class="alert alert-info">
             <div class="float-left">
-               <input class="form-control" type="text" id="txtSonuc" />
+                <input class="form-control" type="text" id="txtSonuc" />
+                <input class="form-control" type="text" id="txtClientCount" />
             </div>
             <div class="float-right">
                 <div id="loading" class="spinner-border" role="status">
@@ -99,6 +108,7 @@
     <div class="col-md-8 offset-2">
          <ul class="list-group" id="namesList"></ul>
     </div>
+    <div id="notify"></div>
 </div>
 
 
