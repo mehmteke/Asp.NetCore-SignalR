@@ -14,8 +14,15 @@ namespace SignalR.API.Hubs
 
         public async Task SendName(string name)
         {
-            Names.Add(name);
-            await Clients.All.SendAsync("ReceiveName", name);
+            if (Names.Count > 5) 
+            {
+                await Clients.Caller.SendAsync("Error", $"Takım en fazla 5 Kişi Olabilir");
+            }
+            else
+            {
+                Names.Add(name);
+                await Clients.All.SendAsync("ReceiveName", name);
+            }
         }
 
         public async Task GetName()
