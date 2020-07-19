@@ -9,7 +9,6 @@ C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\bin\Debug\netcoreapp3.1\Signa
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\bin\Debug\netcoreapp3.1\SignalR.Web.pdb
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\bin\Debug\netcoreapp3.1\SignalR.Web.Views.dll
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\bin\Debug\netcoreapp3.1\SignalR.Web.Views.pdb
-C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.csprojAssemblyReference.cache
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.AssemblyInfoInputs.cache
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.AssemblyInfo.cs
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.csproj.CoreCompileInputs.cache
@@ -36,3 +35,4 @@ C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\Signa
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.genruntimeconfig.cache
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.csproj.CopyComplete
 C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\MEHMTEKE\Source\Repos\SignalR\SignalR.Web\obj\Debug\netcoreapp3.1\SignalR.Web.csprojAssemblyReference.cache

@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
+using SignalR.API.Models;
 
 namespace SignalR.API.Hubs
 {
     public class MyHub:Hub
     {
+        private readonly AppDbContext appDbContext;
         public static List<string> Names { get; set; } = new List<string>();
         private static int ClientCount { get; set; } = 0;
+
+        public MyHub(AppDbContext appDbContext)
+        {
+            this.appDbContext = appDbContext;
+        }
 
 
         public async Task SendName(string name)

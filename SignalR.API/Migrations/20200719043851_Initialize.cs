@@ -2,7 +2,7 @@
 
 namespace SignalR.API.Migrations
 {
-    public partial class start : Migration
+    public partial class Initialize : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

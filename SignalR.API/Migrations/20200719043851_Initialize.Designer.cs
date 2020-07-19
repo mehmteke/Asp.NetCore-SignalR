@@ -10,8 +10,8 @@ using SignalR.API.Models;
 namespace SignalR.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200718164734_start")]
-    partial class start
+    [Migration("20200719043851_Initialize")]
+    partial class Initialize
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
